@@ -49,7 +49,7 @@ class wallet_derive {
         $master = HierarchicalKeyFactory::fromExtended($key, $network);
         
         
-        $start = 0;
+        $start = $params['start'];
         $end = $params['numderive'];
         
         if( $params['includeroot'] ) {

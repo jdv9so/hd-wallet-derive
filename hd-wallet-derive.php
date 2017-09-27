@@ -59,7 +59,7 @@ function get_cli_params() {
                                   'mnemonic:',
                                   'mnemonic-pw:',
                                   'outfile:',
-                                  'numderive:',
+                                  'numderive:', 'start:',
                                   'includeroot',
                                   'path:',
                                   'format:', 'cols:',
@@ -112,6 +112,7 @@ function process_cli_params( $params ) {
     $params['format'] = @$params['format'] ?: 'txt';
     $params['cols'] = @$params['cols'] ?: 'all';
     $params['numderive'] = @$params['numderive'] ?: 10;
+    $params['start'] = @$params['start'] ?: 0;
     $params['includeroot'] = isset($params['includeroot'] );
 
     return [$params, $success];
