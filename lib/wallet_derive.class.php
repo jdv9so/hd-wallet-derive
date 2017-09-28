@@ -70,11 +70,11 @@ class wallet_derive {
                               'path' => 'm');
         }
 
-        mylogger()->log( "Generating addresses", mylogger::info );
+        //mylogger()->log( "Generating addresses", mylogger::info );
         $path_base = is_numeric( $params['path']{0} ) ?  'm/' . $params['path'] : $params['path'];
         for( $i = $start; $i < $end; $i ++ ) {
             if( $i && $i % 10 == 0 ) {
-                mylogger()->log( "Generated $i keys", mylogger::specialinfo );
+                //mylogger()->log( "Generated $i keys", mylogger::specialinfo );
             }
             $path = $path_base . "/$i";
             $key = $master->derivePath($path);
@@ -194,7 +194,7 @@ class walletderivereport {
         fclose( $fh );
 
         if( $outfile ) {
-            mylogger()->log( "Report was written to $fname", mylogger::specialinfo );
+            //mylogger()->log( "Report was written to $fname", mylogger::specialinfo );
         }
     }
 
