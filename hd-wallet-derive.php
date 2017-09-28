@@ -36,8 +36,6 @@ function main( $argv ) {
 
         $key = @$params['key'] ?: $worker->mnemonicToKey( $params['mnemonic'], $params['mnemonic-pw'] );
         $addrs = $worker->derive_keys($key);
-        
-        echo "\n";
         walletderivereport::print_results($params, $addrs);
         return 0;
     }
